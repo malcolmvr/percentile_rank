@@ -1,10 +1,16 @@
 from distutils.core import setup
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
   name = 'percentile_rank',         # How you named your package folder (MyLib)
   packages = ['percentile_rank'],   # Chose the same as "name"
   version = '1.0.0',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  description = 'Extracts the multiscale backbone of complex weighted networks',   # Give a short description about your library
+  description = 'Returns the percentile of a value. Returns the same values as the Excel PERCENTRANK and PERCENTRANK.INC functions.',   # Give a short description about your library
+  long_description = long_description,
+  long_description_content_type="text/markdown",
   author = 'Malcolm van Raalte',                   # Type in your name
   author_email = 'malcolm@van.raalte.ca',      # Type in your E-Mail
   url = 'https://github.com/malcolmvr/percentile_rank',   # Provide either the link to your github or to your website
